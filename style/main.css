@@ -1,0 +1,322 @@
+/* HTML elements */
+
+@font-face {
+    font-family: 'cubanoregular';
+    src: url('/fonts/cubano-regular-webfont.eot');
+    src: url('/fonts/cubano-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/cubano-regular-webfont.woff') format('woff'),
+         url('/fonts/cubano-regular-webfont.ttf') format('truetype'),
+         url('/fonts/cubano-regular-webfont.svg#cubanoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html { 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+	font-size: 18px;
+	font-family: 'cubanoregular', sans-serif;
+	color: black;
+	text-outline: 2px 2px white;
+	background-color: #000000;
+}
+
+h2{
+	font-size: 2.5em;
+}
+
+hr{
+	width: 90%;
+}
+
+textarea {
+    resize: none;
+}
+
+/* ID specific CSS */
+	#sideyBar{
+		position: absolute;
+		top: 0px;
+		left:0px;
+		width: 15%;
+		height: 100%;
+		z-index: 1031;
+	}
+
+	#content{
+		min-width: 720px;
+		min-height: 100%;
+	}
+
+	#sessionStuff{
+		text-align: center;
+	}
+
+	#sessionStuff label{
+		font-size: 1.5em;
+	}
+
+	#sessionStuff input[type="text"]{
+		width: 80%;
+		padding: 0.5em;
+	}
+
+	#chatBox{
+    background-color: #282728;
+    bottom: 0;
+    font-size: 18px;
+    position: absolute;
+    width: 80%;
+	}
+
+	#ytplayer{
+		width: 100%;
+		text-align: center;
+	}
+
+	#builder input[type="text"]{
+		width: 80%;
+		padding: 0.5em;
+	}
+	
+	#chat-box {
+    background-color: #1F1E1F;
+    height: 100%;
+    padding-left: 20px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    z-index: 10000;
+	}
+
+	#board {
+		overflow: auto;
+		height: 100%;
+	}
+
+	#activePpl{
+		overflow-x: hidden;
+		overflow-y: auto;
+		text-align: center;
+	}
+
+	/*Search overlay styling*/
+	#searchStuff {
+		z-index: 10000;
+		background: url(../res/overlay_bg.png);
+		position:fixed; 
+		top:0px; 
+		left:0px; 
+		width:100%; 
+		height:100%; 
+		text-align:center; 
+		vertical-align:middle;
+	}
+
+	#searchStuff #container{
+		width: 80%;
+		max-width: 640px;
+		margin: 3em auto;
+	}
+
+	#searchStuff #container .something{
+		background-color:gray;
+		border-radius: 25px;
+		padding: 25px 5px;
+	}
+
+	#overlayClose{
+		cursor: pointer;
+	}
+
+	#searchResultDiv{
+		padding: 1em ;
+	}
+
+	#board p:nth-child(even){
+    background: none;
+    	}
+	
+	
+/* Classes for CSS */
+
+	/* Custom container */
+	.container-narrow {
+		margin: 0 auto;
+		max-width: 700px;
+	}
+	.container-narrow > hr {
+		margin: 30px 0;
+	}
+
+	/* Main box and buttons */
+	.jumbotron {
+		text-align: center;
+	}
+
+	.jumbotron_margin {
+		margin: 60px 0;
+	}
+	.jumbotron h1 {
+		font-size: 52px;
+		line-height: 1;
+		font-family: 'cubanoregular', helvetica, arial, sans-serif;
+	}
+	.jumbotron .btn {
+    font-family: 'cubanoregular',helvetica,arial,sans-serif;
+    font-size: 23px;
+    padding: 8px;
+    	}
+
+	.vol_controls{
+		font-size: 1.25em;
+		padding: .25em;
+		border: solid 3px gray;
+		border-radius: .25em;
+		cursor: pointer;
+		-webkit-user-select: none; /* Chrome/Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+ */
+		/* Rules below not implemented in browsers yet */
+		-o-user-select: none;
+		user-select: none;
+	}
+
+	.black_box{
+		background: black;
+		padding: 0.25em;
+		border-radius: 0.25em;
+	}
+
+	.vol_controls:hover{
+		border: solid 3px #c4302b;
+		color: #c4302b;
+	}
+	
+	.vol_value{
+		font-size: 1.25em;
+		padding: .25em;
+	}
+	
+	.result{
+		padding: .25em;
+		cursor: pointer;
+		color: black;
+	}
+
+	.result:hover{
+		background: #c4302b;
+		color: white;
+	}
+
+	.sideyItem{
+		margin: 2em 1em;
+		border-bottom: solid 1px #393939;
+	}
+	
+	.sideyItem:first-child{
+		margin-top: 5em;
+	}
+
+	.sideyItem:last-child{
+		border: solid 0px black;
+		margin-bottom: 0px;
+	}
+
+	.logo{
+		margin: 2em 1em;
+	}
+
+	.box_it{
+		border-radius: 0px;
+		padding: 0.2em;
+		border: solid 1px #393939;
+		height: 90%;
+		overflow-y: auto;
+	}
+
+	.no_border{
+		border: solid 0px black;
+	}
+
+	/*Helper CSS*/
+	.margin_1em{
+		margin: 1em;
+	}
+
+	.errorSpace{
+		color: red;
+	}
+
+	.soft_box{
+    color: #FFFFFF;
+    font-family: 'cubanoregular', helvetica, arial, sans-serif;
+    text-align: center;
+	}
+	
+	.clip_overflow{
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.no_bullets{
+		list-style-type: none;
+	}
+
+	.padding_top_bottom_1{
+		padding: 1em 0px;
+	}
+
+	.full_width{
+		width: 95%;
+	}
+
+	.btn_padding{
+		padding: 8px 0;
+	}
+
+	.noisy_net{
+		background: #333;
+	}
+
+	.debut_light{
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 20px;	}
+	
+	.push_down{
+	}
+
+	.white_bg{
+		background: white;
+	}
+
+	.border_right{
+		border-right: solid 1px gray;
+	}
+
+	.grey_text{
+		color: #E1E1E1;
+	}
+	
+	.thick_border{
+    border: 10px solid #333333;
+    border-radius: 3px;
+    }
+
+	.push_up_3px{
+		position: relative;
+		top: -3px;
+	}
+
+	.push_to_corner{
+		position: relative;
+		top: -10px;
+		left:; 10px;
+	}
