@@ -1,5 +1,5 @@
 <?php
-	$homepage = "http://localhost/SA_ytplayer_chat";
+	$homepage = "http://videoplaya.herokuapp.com";
 	$lengthOfID = 8;
 	$nextDir = "session";
 ?>
