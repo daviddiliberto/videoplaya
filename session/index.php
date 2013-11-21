@@ -42,9 +42,7 @@ $sessionURL = "http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 
     <!-- Sidebar -->
 
-    	<div style="position:absolute;padding:20px;opacity:0.5;"><h1>BORED</h1></div>	
-	<div id="bubble"></div>
-
+    	<div style="opacity: 0.5; padding-left: 30px; padding-top: 20px; position: absolute;"><h1>LOITER.TV</h1></div>	
 	<div id="content">
 		<div id="stuffs" class="jumbotron push_down">
 			<!-- Overlay div -->
@@ -72,12 +70,6 @@ $sessionURL = "http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 					<!-- Volume Controls -->
 					
 					<div id="controls" class="margin_1em row-fluid">
-                        <div class="grey_text span2 offset3">
-                            <h6>Current DJ </br><span id="currentDJ">&nbsp---&nbsp</span></h6>
-                        </div>
-                        <div class="grey_text span2">
-                            <h6>Queue </br><span id="inQueue">0</span></h6>
-                        </div>
 						<button id="vol_down"  class="btn btn-inverse span1">&nbsp&nbsp-&nbsp&nbsp</button>
 						<button id="vol_up"    class="btn btn-inverse span1">&nbsp&nbsp+&nbsp&nbsp</button>
 					</div>
@@ -86,20 +78,24 @@ $sessionURL = "http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 						<button id="searchButton" class="btn btn-primary span4 offset2" onclick='searchThings();' disabled="disabled">Initalizing...</button>
 						<button id="ifImTheDJ"    class="btn btn-inverse span4" onclick="skipThis();"     disabled="disabled">Skip this video</button>
 					</div>
-					<div>
 					<!--...<br>
 						Space for more stuffs<br>
 						...<br>-->
-                        <div>
+                        <div class="span6 offset3">
                             <h6 class="grey_text">Room Address: <?php echo $sessionURL; ?>&nbsp&nbsp <button class="btn btn-mini" id="copy"> Copy </button></h6>
                         </div>
 							
-					</div>
 			  	</div>
 			  	<!-- Chat div -->
 			  	<div class="span3" id="chat-box">
 			  		<div class="row-fluid">
-                        <div id="activePpl">
+			  			<div class="grey_text span1">
+                            <h6>Current DJ </br><span id="currentDJ">&nbsp---&nbsp</span></h6>
+                        </div>
+                        <div class="grey_text span1">
+                            <h6>Queue </br><span id="inQueue">0</span></h6>
+                        </div>
+                        <div id="activePpl span1">
                             <h6>Online Now...</h6>
                             <ul id="activeUsers" class="no_bullets">
                             </ul>
@@ -110,8 +106,8 @@ $sessionURL = "http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 							</form>
 						</div>
 					</div>
-					<div>
-						<textarea cols=2 class="thick_border" style="border-radius: 3px;" id="chatBox" placeholder="Write message here...." value="Connecting to chat server..." disabled="disabled" maxlength=140 /></textarea>
+					<div id="span3" style="bottom:0;">
+						<textarea cols=2 id="chatBox" placeholder="Say something..." value="Connecting to chat server..." disabled="disabled" maxlength=140 /></textarea>
 					</div>
 				</div>
 			</div> 
@@ -120,7 +116,7 @@ $sessionURL = "http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 
 	<!-- Le javascript
 	================================================== -->
-	<script src="http://ec2-54-213-34-40.us-west-2.compute.amazonaws.com:8080/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="../js/socket.io.js"></script>
 	<script type="text/javascript" src="ZeroClipboard.js"></script>
 	<script type="text/javascript" src="../js/helper.js"></script>
 	<script type="text/javascript" src="../js/ytplayerStuff.js"></script>
@@ -130,16 +126,6 @@ $sessionURL = "http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 		var clip = new ZeroClipboard.Client();
 		clip.setText('<?php echo $sessionURL; ?>');
 		clip.glue('copy');
-	</script>
-			<script>
-		    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		    ga('create', 'UA-42162448-1', 'sugaryasphalt.com');
-		    ga('send', 'pageview');
-
 	</script>
 
 </body>

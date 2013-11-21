@@ -30,7 +30,7 @@ if(isset($_SESSION["errorURL"])){
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>BORED.TV</title>
+	<title>LOITER.TV</title>
 	<link rel="icon" type="image/png" href="res/favicon.png" >
 	<link type="text/css" rel="stylesheet" href="style/main.css" />
 	<link href="style/bootstrap.css" rel="stylesheet">
@@ -39,7 +39,7 @@ if(isset($_SESSION["errorURL"])){
 	<body>
 		<div class="container-narrow">
 			<div class="jumbotron">
-				<h1>BORED.TV</h1>
+				<h1>LOITER.TV</h1>
 				<h4>Watch youtube with your friends, collaborate on a playlist together</h4>
 				<h4>Just pick a screen name and start watching!</h4>
 				<br>
@@ -86,7 +86,7 @@ if(isset($_SESSION["errorURL"])){
 	    <!-- Placed at the end of the document so the pages load faster -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 		<script type="text/javascript" src="js/helper.js"></script>
-		<script src="http://ec2-54-213-34-40.us-west-2.compute.amazonaws.com:8080/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="js/socket.io.js"></script>
 		<script type="text/javascript">
 			if (checkForWebsockets() == false){
 				$("#warningArea").html("<div class='alert alert-error'><strong>Oh no! Your browser does not support websockets. Please try with the latest version of Firefox/Chrome/Safari.</div>");
